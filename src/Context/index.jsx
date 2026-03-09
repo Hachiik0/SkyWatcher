@@ -13,7 +13,7 @@ export const StateContextProvider = ({ children }) => {
   // Fungsi untuk sinkronisasi dengan db.json dan localStorage
   const fetchFavoritesFromDB = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/favorites");
+      const response = await axios.get("https://skywatcher-production-e61c.up.railway.app/favorites");
       const dbFavorites = response.data;
       localStorage.setItem("favorites", JSON.stringify(dbFavorites)); // Menyimpan ke localStorage
       setFavorites(dbFavorites); // Memperbarui state favorites
