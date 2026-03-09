@@ -52,7 +52,7 @@ Data cuaca diambil dari [Visual Crossing Weather API](https://rapidapi.com/visu
    ```bash
    npm install
    ```
-3. Jalankan backend (port default **5000**):
+3. Jalankan backend:
    ```bash
    node src/backend/server.js
    ```
