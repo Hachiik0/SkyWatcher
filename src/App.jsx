@@ -26,7 +26,7 @@ function App() {
 
     // Simpan data favorit ke database (db.json)
     axios
-      .put(`http://localhost:5000/favorites/${favoritesData.id}`, favoritesData)
+      .put(`https://skywatcher-production-e61c.up.railway.app/favorites/${favoritesData.id}`, favoritesData)
       .then(() => {
         console.log("Data berhasil disimpan ke db.json");
       })
@@ -55,7 +55,7 @@ function App() {
 
       try {
         // Mengirim data favorit baru ke server (db.json)
-        await axios.post("http://localhost:5000/favorites", newFavorite);
+        await axios.post("https://skywatcher-production-e61c.up.railway.app/favorites/", newFavorite);
 
         // Update state favorites setelah data berhasil ditambahkan
         setFavorites(newFavorites);
@@ -91,7 +91,7 @@ function App() {
     saveFavorites(newFavorites); // Menyimpan perubahan favorit
 
     try {
-      await axios.delete(`http://localhost:5000/favorites/${favoriteId}`); // Menggunakan favoriteId yang benar
+      await axios.delete(`https://skywatcher-production-e61c.up.railway.app/favorites/${favoriteId}`); // Menggunakan favoriteId yang benar
       setFavorites(newFavorites);
       setMessage("Kota berhasil dihapus!");
       setIsModalOpen(true);
@@ -107,7 +107,7 @@ function App() {
   useEffect(() => {
     // Mengambil data favorit dari db.json saat pertama kali load
     axios
-      .get("http://localhost:5000/favorites")
+      .get("https://skywatcher-production-e61c.up.railway.app/favorites/")
       .then((response) => {
         setFavorites(response.data);
         // Simpan data favorit ke localStorage
