@@ -56,7 +56,6 @@ Data cuaca diambil dari [Visual Crossing Weather API](https://rapidapi.com/visu
    ```bash
    node src/backend/server.js
    ```
-   atau gunakan [nodemon](https://www.npmjs.com/package/nodemon) untuk reload otomatis.
 4. jalankan frontend:
    ```bash
    npm run dev
