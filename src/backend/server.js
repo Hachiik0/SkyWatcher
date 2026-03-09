@@ -15,6 +15,10 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("SkyWatcher API is running");
+});
+
 // Path untuk file JSON yang menyimpan data favorit
 const favoritesFilePath = path.join(__dirname, "db.json");
 
